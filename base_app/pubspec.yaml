@@ -11,6 +11,12 @@ dependencies:
   external_dependencies:
     path: '../external_dependencies'
 
+  commons:
+    path: '../commons'
+
+  auth:
+    path: '../auth'
+
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
