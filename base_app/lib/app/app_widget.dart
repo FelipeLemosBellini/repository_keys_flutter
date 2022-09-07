@@ -1,4 +1,4 @@
-import 'package:commons/helper/keys_routes.dart';
+import 'package:commons/helper/safe_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -7,7 +7,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute(SafeZoneRoutes.signIn);
+    Modular.setInitialRoute(SafeRoutes.welcome);
     return MaterialApp.router(
         routerDelegate: Modular.routerDelegate,
         debugShowCheckedModeBanner: false,

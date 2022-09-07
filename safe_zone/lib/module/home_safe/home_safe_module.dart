@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:commons/helper/keys_routes.dart';
+import 'package:commons/helper/safe_routes.dart';
 import 'package:safe_zone/pages/home_safe_page.dart';
 import 'package:safe_zone/stores/home_safe_store.dart';
 
@@ -10,7 +10,7 @@ final homePageDI = <Bind>[
 
 final List<ModularRoute> homePageRoute = [
   ChildRoute(
-    SafeZoneRoutes.homeSafe,
+    SafeRoutes.homeSafe,
     child: (context, args) => const HomeSafePage(),
     transition: TransitionType.rightToLeft,
   )
