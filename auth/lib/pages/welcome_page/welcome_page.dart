@@ -13,8 +13,18 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
+  List<Color> colors = [SafeColors.bluishGray, SafeColors.tin, SafeColors.darkBlue];
+
   @override
   Widget build(BuildContext context) {
-    return Container(decoration: const BoxDecoration(color: SafeColors.red));
+    return Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: colors)),
+        child: Scaffold(
+            appBar: AppBar(),
+            body: Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: colors)),
+                child: const Center(child: Text("buttn")))));
   }
 }

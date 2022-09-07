@@ -7,10 +7,9 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute(SafeRoutes.welcome);
-    return MaterialApp.router(
-        routerDelegate: Modular.routerDelegate,
-        debugShowCheckedModeBanner: false,
-        routeInformationParser: Modular.routeInformationParser);
+    return const MaterialApp(
+      initialRoute: SafeRoutes.welcome,
+      debugShowCheckedModeBanner: false,
+    ).modular();
   }
 }
