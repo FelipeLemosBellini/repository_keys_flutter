@@ -10,7 +10,7 @@ final homePageDI = <Bind>[
 
 final List<ModularRoute> homePageRoute = [
   ChildRoute(
-    SafeZoneRoutes.signIn,
+    SafeZoneRoutes.homeSafe,
     child: (context, args) => const HomeSafePage(),
     transition: TransitionType.rightToLeft,
   )

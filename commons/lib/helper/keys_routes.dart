@@ -3,5 +3,5 @@ abstract class SafeZoneRoutes {
   static const String signIn = '/signIn';
   static const String signUp = '/signUp';
   static const String biometry = '/biometry';
-  static const String safeZone = '/safeZone';
+  static const String homeSafe = '/homeSafe';
 }
