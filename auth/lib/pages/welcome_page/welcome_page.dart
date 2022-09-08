@@ -31,8 +31,10 @@ class _WelcomePageState extends State<WelcomePage> {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: colors)),
                 child: Column(children: [
-                  Container(decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(SafeImages.app.png, package: SafeImages.app.package)))),
+                  Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(SafeImages.ic_gallery.png, package: SafeImages.ic_gallery.package)))),
                   Center(child: Image.asset(SafeImages.app.png, width: 100, height: 100)),
                   const Spacer(flex: 7),
                   Padding(
