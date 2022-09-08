@@ -14,6 +14,9 @@ dependencies:
   commons:
     path: '../commons'
 
+  assets:
+    path: '../assets'
+
   flutter:
     sdk: flutter
 
@@ -25,6 +28,7 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter:
+
   uses-material-design: true
 
   module:
