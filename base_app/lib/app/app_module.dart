@@ -5,7 +5,7 @@ import 'package:safe_zone/module/safe_zone_module.dart';
 
 class AppModule extends Module {
   @override
-  List<Bind> get binds => [...loginPageDI];
+  List<Bind> get binds => [];
 
   @override
   List<ModularRoute> get routes => [

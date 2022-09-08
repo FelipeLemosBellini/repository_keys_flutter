@@ -1,5 +1,6 @@
 enum SafeImages {
   app,
+  lock_pick,
 }
 
 extension SafeImageExtension on SafeImages {

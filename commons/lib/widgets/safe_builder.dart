@@ -1,11 +1,12 @@
+import 'package:commons/commons.dart';
 import 'package:flutter/material.dart';
 import 'package:external_dependencies/flutter_triple.dart';
 
-class SafeBuilder<TStore extends Store<Exception, TState>, TState extends Object>
-    extends TripleBuilder<TStore, Exception, TState> {
+class SafeBuilder<TStore extends Store<SafeException, TState>, TState extends Object>
+    extends TripleBuilder<TStore, SafeException, TState> {
   final TStore store;
   final BuildContext? context;
-  final void Function(BuildContext, Exception error)? onError;
+  final void Function(BuildContext, SafeException error)? onError;
 
   SafeBuilder({Key? key, required this.store, required builder, this.context, this.onError})
       : super(key: key, builder: builder, store: store);
