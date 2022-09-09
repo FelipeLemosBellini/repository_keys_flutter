@@ -8,7 +8,7 @@ import 'package:assets/assets.dart';
 import 'package:assets/assets/safe_images.dart';
 
 class WelcomePage extends StatefulWidget {
-  WelcomePage({Key? key}) : super(key: key);
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
   State<WelcomePage> createState() => _WelcomePageState();
@@ -38,17 +38,24 @@ class _WelcomePageState extends State<WelcomePage> {
                       height: 200,
                       width: 200,
                       decoration: BoxDecoration(
-                          color: Colors.yellow,
                           image: DecorationImage(
                               image: AssetImage(SafeImages.lock_pick.png, package: SafeImages.lock_pick.package)))),
-                  const Spacer(flex: 4),
+                  const Spacer(flex: 1),
+                  const Text(SafeStrings.secureWorld,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          shadows: <Shadow>[Shadow(offset: Offset(1.0, 1.0), blurRadius: 3.0, color: SafeColors.black)],
+                          fontWeight: FontWeight.bold,
+                          color: SafeColors.yellow,
+                          fontSize: SafeDimens.twentyEight)),
+                  const Spacer(flex: 3),
                   Padding(
                       padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-                      child: SafePrimaryButtonWidget(text: 'Login', onTap: _store.goToLoginPage)),
+                      child: SafePrimaryButtonWidget(text: SafeStrings.login, onTap: _store.goToLoginPage)),
                   Padding(
                       padding: const EdgeInsets.only(
                           top: SafeDimens.sixteen, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-                      child: SafeSecondaryButtonWidget(onTap: () {}, text: 'Sign Up')),
+                      child: SafeSecondaryButtonWidget(onTap: _store.goToSignUpPage, text: SafeStrings.signUp)),
                   const Spacer(flex: 1)
                 ]))));
   }

@@ -11,7 +11,7 @@ final welcomePageDI = <Bind>[
 final List<ModularRoute> welcomePageRoute = [
   ChildRoute(
     SafeRoutes.welcome,
-    child: (context, args) => WelcomePage(),
-    transition: TransitionType.rightToLeft,
+    child: (context, args) => const WelcomePage(),
+    transition: TransitionType.leftToRight,
   )
 ];

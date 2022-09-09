@@ -6,6 +6,11 @@ import 'package:commons/commons.dart';
 class WelcomeStore extends MobXStore<SafeException, WelcomeViewModel> {
   WelcomeStore() : super(WelcomeViewModel());
 
+  @override
+  void initStore() {
+    super.initStore();
+  }
+
   void goToLoginPage() => Modular.to.pushNamed(SafeRoutes.signIn);
 
   void goToSignUpPage() => Modular.to.pushNamed(SafeRoutes.signUp);
