@@ -22,6 +22,7 @@ class _LoginPageState extends State<LoginPage> {
         store: _store,
         context: context,
         builder: (context, triple) => Scaffold(
+            appBar: SafeAppBarWidget(title: const Text(SafeStrings.login)),
             body: Container(
                 color: SafeColors.darkBlue,
                 child: Column(children: [
