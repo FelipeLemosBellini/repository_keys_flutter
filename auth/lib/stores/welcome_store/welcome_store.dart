@@ -14,6 +14,4 @@ class WelcomeStore extends MobXStore<SafeException, WelcomeViewModel> {
   void goToLoginPage() => Modular.to.pushNamed(SafeRoutes.signIn);
 
   void goToSignUpPage() => Modular.to.pushNamed(SafeRoutes.signUp);
-
-  void onError(error) => print(error);
 }

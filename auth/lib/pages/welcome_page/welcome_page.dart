@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:commons/commons.dart';
 import 'package:assets/assets.dart';
-import 'package:assets/assets/safe_images.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -41,13 +40,8 @@ class _WelcomePageState extends State<WelcomePage> {
                           image: DecorationImage(
                               image: AssetImage(SafeImages.lock_pick.png, package: SafeImages.lock_pick.package)))),
                   const Spacer(flex: 1),
-                  const Text(SafeStrings.secureWorld,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          shadows: <Shadow>[Shadow(offset: Offset(1.0, 1.0), blurRadius: 3.0, color: SafeColors.black)],
-                          fontWeight: FontWeight.bold,
-                          color: SafeColors.yellow,
-                          fontSize: SafeDimens.twentyEight)),
+                  const Text(SafeStrings.safeSpace,
+                      textAlign: TextAlign.center).title(),
                   const Spacer(flex: 3),
                   Padding(
                       padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
