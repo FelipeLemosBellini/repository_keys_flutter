@@ -22,4 +22,24 @@ extension TypographyExtension on Text {
         textWidthBasis: textWidthBasis,
         textHeightBehavior: textHeightBehavior);
   }
+
+  Text smallText({TextStyle? textStyle}) {
+    return Text(data!,
+        style: TextStyle(
+          color: SafeColors.white.withOpacity(0.7),
+          fontSize: SafeDimens.sixteen,
+        ),
+        key: key,
+        strutStyle: strutStyle,
+        textAlign: textAlign,
+        textDirection: textDirection,
+        locale: locale,
+        softWrap: softWrap,
+        overflow: overflow,
+        textScaleFactor: textScaleFactor,
+        maxLines: maxLines,
+        semanticsLabel: semanticsLabel,
+        textWidthBasis: textWidthBasis,
+        textHeightBehavior: textHeightBehavior);
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:assets/assets.dart';
 import 'package:auth/stores/sign_up_store/sign_up_store.dart';
 import 'package:commons/commons.dart';
 import 'package:commons/widgets/safe_builder.dart';
@@ -18,9 +19,8 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return SafeBuilder(
         store: _store,
-        builder: Scaffold(appBar: AppBar(backgroundColor: SafeColors.darkBlue,title: Text("df")),
-            body: Container(
-          color: SafeColors.darkBlue,
-        )));
+        builder: (context, triple) => Scaffold(
+            appBar: SafeAppBarWidget(title: const Text(SafeStrings.signUp)),
+            body: Container(color: SafeColors.darkBlue)));
   }
 }

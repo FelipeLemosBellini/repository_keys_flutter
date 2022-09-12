@@ -18,23 +18,42 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return SafeBuilder<LoginStore, LoginViewModel>(
         store: _store,
         context: context,
         builder: (context, triple) => Scaffold(
             appBar: SafeAppBarWidget(title: const Text(SafeStrings.login)),
             body: Container(
+                height: height,
                 color: SafeColors.darkBlue,
                 child: Column(children: [
                   const Spacer(flex: 2),
-                  const Text(SafeStrings.login,
-                      style: TextStyle(
-                          color: SafeColors.white, fontWeight: FontWeight.w600, fontSize: SafeDimens.twentyEight)),
-                  const Spacer(flex: 2),
                   Padding(
                       padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-                      child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: () {})),
-                  const Spacer(flex: 1)
+                      child: Column(children: [
+                        SafeInputTextWidget(
+                            hintText: SafeStrings.email,
+                            textInputType: TextInputType.emailAddress,
+                            controller: _store.state.emailController),
+                        Padding(
+                            padding: const EdgeInsets.only(top: SafeDimens.sixteen),
+                            child: SafeInputTextWidget(
+                                hintText: SafeStrings.password,
+                                textInputType: TextInputType.visiblePassword,
+                                controller: _store.state.passwordController)),
+                        Padding(
+                            padding: const EdgeInsets.only(top: SafeDimens.ten, right: SafeDimens.eight),
+                            child: Align(
+                                alignment: Alignment.centerRight,
+                                child: GestureDetector(
+                                    onTap: () {}, child: const Text(SafeStrings.forgotPassword).smallText())))
+                      ])),
+                  const Spacer(flex: 2),
+                  Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: SafeDimens.forty, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
+                      child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: () {}))
                 ]))));
   }
 }

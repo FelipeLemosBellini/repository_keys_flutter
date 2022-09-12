@@ -4,4 +4,6 @@ import 'package:mobx_triple/mobx_triple.dart';
 
 class LoginStore extends MobXStore<SafeException, LoginViewModel> {
   LoginStore() : super(LoginViewModel());
+
+  Future<void> sign({required String email, required String password}) async {}
 }

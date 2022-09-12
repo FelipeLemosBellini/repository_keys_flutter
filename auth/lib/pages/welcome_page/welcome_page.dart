@@ -23,7 +23,6 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double widthImage = MediaQuery.of(context).size.width;
     return SafeBuilder<WelcomeStore, WelcomeViewModel>(
         store: _store,
         context: context,
@@ -32,25 +31,26 @@ class _WelcomePageState extends State<WelcomePage> {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: colors)),
                 child: Column(children: [
-                  const Spacer(flex: 2),
+                  const Spacer(flex: 1),
                   Container(
-                      height: 200,
-                      width: 200,
+                      height: SafeDimens.twoHundred,
+                      width: SafeDimens.twoHundred,
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(SafeImages.lock_pick.png, package: SafeImages.lock_pick.package)))),
                   const Spacer(flex: 1),
-                  const Text(SafeStrings.safeSpace,
-                      textAlign: TextAlign.center).title(),
-                  const Spacer(flex: 3),
+                  const Text(SafeStrings.safeSpace, textAlign: TextAlign.center).title(),
+                  const Spacer(flex: 1),
                   Padding(
                       padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
                       child: SafePrimaryButtonWidget(text: SafeStrings.login, onTap: _store.goToLoginPage)),
                   Padding(
                       padding: const EdgeInsets.only(
-                          top: SafeDimens.sixteen, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-                      child: SafeSecondaryButtonWidget(onTap: _store.goToSignUpPage, text: SafeStrings.signUp)),
-                  const Spacer(flex: 1)
+                          bottom: SafeDimens.forty,
+                          top: SafeDimens.sixteen,
+                          left: SafeDimens.thirtyTwo,
+                          right: SafeDimens.thirtyTwo),
+                      child: SafeSecondaryButtonWidget(onTap: _store.goToSignUpPage, text: SafeStrings.signUp))
                 ]))));
   }
 }
