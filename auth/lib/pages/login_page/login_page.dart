@@ -18,17 +18,15 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     return SafeBuilder<LoginStore, LoginViewModel>(
         store: _store,
         context: context,
         builder: (context, triple) => Scaffold(
             appBar: SafeAppBarWidget(title: const Text(SafeStrings.login)),
             body: Container(
-                height: height,
                 color: SafeColors.darkBlue,
                 child: Column(children: [
-                  const Spacer(flex: 2),
+                  const Spacer(flex: 1),
                   Padding(
                       padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
                       child: Column(children: [
@@ -47,13 +45,14 @@ class _LoginPageState extends State<LoginPage> {
                             child: Align(
                                 alignment: Alignment.centerRight,
                                 child: GestureDetector(
-                                    onTap: () {}, child: const Text(SafeStrings.forgotPassword).smallText())))
+                                    onTap: _store.forgotPassword,
+                                    child: const Text(SafeStrings.forgotPassword).smallText())))
                       ])),
-                  const Spacer(flex: 2),
+                  const Spacer(flex: 7),
                   Padding(
                       padding: const EdgeInsets.only(
                           bottom: SafeDimens.forty, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-                      child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: () {}))
+                      child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: _store.sign))
                 ]))));
   }
 }

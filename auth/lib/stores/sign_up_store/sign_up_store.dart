@@ -4,4 +4,11 @@ import 'package:mobx_triple/mobx_triple.dart';
 
 class SignUpStore extends MobXStore<SafeException, SignUpViewModel> {
   SignUpStore() : super(SignUpViewModel());
+
+  void changeCheckBox(newValue) {
+    state.changeCheckBox = !newValue;
+    execute(() async => state);
+  }
+
+  Future<void> signUp() async {}
 }

@@ -7,8 +7,13 @@ class SafePrimaryButtonWidget extends StatelessWidget {
   final double? height;
   final double? width;
 
-  const SafePrimaryButtonWidget({required this.text, required this.onTap, this.height, this.width, Key? key})
-      : super(key: key);
+  const SafePrimaryButtonWidget({
+    required this.text,
+    required this.onTap,
+    this.height,
+    this.width,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
