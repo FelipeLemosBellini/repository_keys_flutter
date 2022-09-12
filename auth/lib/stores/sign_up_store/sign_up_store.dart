@@ -6,7 +6,7 @@ class SignUpStore extends MobXStore<SafeException, SignUpViewModel> {
   SignUpStore() : super(SignUpViewModel());
 
   void changeCheckBox(newValue) {
-    state.changeCheckBox = !newValue;
+    state.isChecked = !newValue;
     execute(() async => state);
   }
 

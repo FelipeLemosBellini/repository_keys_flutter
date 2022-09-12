@@ -52,14 +52,12 @@ class _SignUpPageState extends State<SignUpPage> {
                           left: SafeDimens.twentyEight, right: SafeDimens.twentyEight, bottom: SafeDimens.eight),
                       child: Row(children: [
                         Checkbox(
-                            checkColor: SafeColors.yellow,
-                            activeColor: SafeColors.white,
-                            focusColor: SafeColors.white,
-                            hoverColor: SafeColors.white,
-                            value: _store.state.changeCheckBox,
-                            onChanged: (_) => _store.changeCheckBox(_store.state.changeCheckBox)),
+                            checkColor: SafeColors.black,
+                            activeColor: SafeColors.yellow,
+                            value: _store.state.isChecked,
+                            onChanged: (_) => _store.changeCheckBox(_store.state.isChecked)),
                         GestureDetector(
-                            onTap: () => _store.changeCheckBox(_store.state.changeCheckBox),
+                            onTap: () => _store.changeCheckBox(_store.state.isChecked),
                             child: const Text(SafeStrings.privacyPolicies, style: TextStyle(color: SafeColors.white)))
                       ])),
                   Padding(
