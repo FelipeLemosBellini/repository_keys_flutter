@@ -9,3 +9,4 @@ export 'package:commons/widgets/safe_secondary_button_widget.dart';
 export 'package:commons/exception/safe_exception.dart';
 export 'package:commons/widgets/safe_appbar_widget.dart';
 export 'package:commons/widgets/safe_input_text_widget.dart';
+export 'package:commons/widgets/safe_builder.dart';

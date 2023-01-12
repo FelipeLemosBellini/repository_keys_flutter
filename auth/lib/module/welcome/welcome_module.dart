@@ -12,6 +12,6 @@ final List<ModularRoute> welcomePageRoute = [
   ChildRoute(
     SafeRoutes.welcome,
     child: (context, args) => const WelcomePage(),
-    transition: TransitionType.leftToRight,
+    transition: TransitionType.noTransition,
   )
 ];

@@ -6,14 +6,18 @@ class SafePrimaryButtonWidget extends StatelessWidget {
   final Function? onTap;
   final double? height;
   final double? width;
+  final Color? textColor;
 
   const SafePrimaryButtonWidget({
     required this.text,
     required this.onTap,
     this.height,
+    this.textColor,
     this.width,
     Key? key,
   }) : super(key: key);
+
+  Color get colorTextButton => textColor ?? SafeColors.darkBlue;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +31,6 @@ class SafePrimaryButtonWidget extends StatelessWidget {
             hoverColor: SafeColors.transparent,
             highlightColor: SafeColors.transparent,
             onPressed: () => onTap!(),
-            child: Center(child: Text(text, style: const TextStyle(fontWeight: FontWeight.w700)))));
+            child: Center(child: Text(text, style: TextStyle(color: colorTextButton, fontWeight: FontWeight.w700)))));
   }
 }
