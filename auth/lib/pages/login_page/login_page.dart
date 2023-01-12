@@ -26,31 +26,31 @@ class _LoginPageState extends State<LoginPage> {
             body: Column(children: [
               const Spacer(flex: 1),
               Padding(
-              padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-              child: Column(children: [
-                SafeInputTextWidget(
-                    hintText: SafeStrings.email,
-                    textInputType: TextInputType.emailAddress,
-                    controller: _store.state.emailController),
-                Padding(
-                    padding: const EdgeInsets.only(top: SafeDimens.sixteen),
-                    child: SafeInputTextWidget(
-                        hintText: SafeStrings.password,
-                        textInputType: TextInputType.visiblePassword,
-                        controller: _store.state.passwordController)),
-                Padding(
-                    padding: const EdgeInsets.only(top: SafeDimens.ten, right: SafeDimens.eight),
-                    child: Align(
-                        alignment: Alignment.centerRight,
-                        child: GestureDetector(
-                            onTap: _store.forgotPassword,
-                            child: const Text(SafeStrings.forgotPassword).smallText())))
-              ])),
+                  padding: const EdgeInsets.only(left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
+                  child: Column(children: [
+                    SafeInputTextWidget(
+                        hintText: SafeStrings.email,
+                        textInputType: TextInputType.emailAddress,
+                        controller: _store.state.emailController),
+                    Padding(
+                        padding: const EdgeInsets.only(top: SafeDimens.sixteen),
+                        child: SafeInputTextWidget(
+                            hintText: SafeStrings.password,
+                            textInputType: TextInputType.visiblePassword,
+                            controller: _store.state.passwordController)),
+                    Padding(
+                        padding: const EdgeInsets.only(top: SafeDimens.ten, right: SafeDimens.eight),
+                        child: Align(
+                            alignment: Alignment.centerRight,
+                            child: GestureDetector(
+                                onTap: _store.forgotPassword,
+                                child: const Text(SafeStrings.forgotPassword).smallText())))
+                  ])),
               const Spacer(flex: 7),
               Padding(
-              padding: const EdgeInsets.only(
-                  bottom: SafeDimens.forty, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
-              child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: _store.sign))
+                  padding: const EdgeInsets.only(
+                      bottom: SafeDimens.forty, left: SafeDimens.thirtyTwo, right: SafeDimens.thirtyTwo),
+                  child: SafePrimaryButtonWidget(text: SafeStrings.confirm, onTap: _store.sign))
             ])));
   }
 }

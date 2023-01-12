@@ -6,7 +6,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 class LoginStore extends MobXStore<SafeException, LoginViewModel> {
   LoginStore() : super(LoginViewModel());
 
-  Future<void> sign() async {}
+  Future<void> sign() async => Modular.to.navigate(SafeRoutes.homeSafe);
 
   Future<void> forgotPassword() async => Modular.to.pushNamed(SafeRoutes.forgotPasswordPage);
 }
