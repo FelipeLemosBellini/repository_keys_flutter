@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-            initialRoute: SafeRoutes.homeSafe,
+            initialRoute: SafeRoutes.welcome,
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
                 highlightColor: Colors.transparent,
