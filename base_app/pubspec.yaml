@@ -4,7 +4,7 @@ description: A new flutter module project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.16.2 <3.0.0"
+  sdk: '>=2.19.4 <3.0.0'
 
 dependencies:
 
@@ -31,8 +31,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-  module:
-    androidX: true
-    androidPackage: com.example.base_app
-    iosBundleIdentifier: com.example.baseApp
